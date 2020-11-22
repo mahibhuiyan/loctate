@@ -99,20 +99,66 @@ nav{
     color: rgb(36 31 33) !important;
     font-size: 22px !important;
     position: relative;
-    padding: 0px !important;
+    padding:  3px 0px !important;
 }
-.navbar-light .navbar-nav .nav-link:after{
+.navbar-light .navbar-nav .nav-link:after  {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     height: 2px;
     background: rgba(0, 0, 0, 0.815);
-    width: 0;
-    transition: .3s;
+    width: 100%;
+    transition:all .61s;
+    transform: scale(0);
+    transform-origin: right;
 }
 .navbar-light .navbar-nav .nav-link:hover:after{
-    width: 90%;
+        transform: scale(1);
+
+    transform-origin: left;
+}
+.navbar-light .navbar-nav .nav-link:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    height: 2px;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.815);
+    width: 100%;
+    transition: all .6s; 
+}
+
+.navbar-light .navbar-nav .nav-link:hover:before{
+    transform: scale(1); 
+    transform-origin: right;
+}
+.navbar-light .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow:none;
+}
+.collap button span{
+    width: 20px;
+    height: 2px;
+    background: #272023;
+    display: block;
+    margin: 5px 0;
+    transition: .3s;
+}
+.collap button span:first-child{
+    width:15px
+}
+.collap button span:last-child{
+    width:25px
+}
+.collap button:hover span  {
+ width: 25px;
+}
+.collap button:focus span  {
+ width: 25px;
 }
 .nav-search .fa{
     color: #241F21;
@@ -319,7 +365,7 @@ nav{
 .reviews {
     background: white;
     padding: 70px 27px;
-    min-height: 450px;
+    height: 450px;
 }
 .reviews img{
     margin-bottom: 25px;
@@ -378,19 +424,18 @@ footer{
     border-bottom: 2px solid #231f20;
     width: 80%;
 }
-.widget .msg:focus{
+.widget .msg input:focus{
     outline: none;
 }
 .widget .msg .massage{
     border: none;
     background: transparent;
-    width: 65%;
+    width: 80%;
 }
 .widget .msg .fa{
     color: #231f20;
     font-size: 25px;
-    font-weight: lighter;
-    margin-left: 25px;
+    font-weight: lighter; 
 }
 .widget .social-icon{}
 .widget .social-icon .fa{
